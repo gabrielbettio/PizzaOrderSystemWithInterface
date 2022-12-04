@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane prefHeight="495.0" prefWidth="546.0" stylesheets="@application/application.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="409.0" minWidth="10.0" prefWidth="230.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="115.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="128.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="79.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="42.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="42.0" minHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="105.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="111.0" minHeight="8.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.rowIndex="2">
+         <children>
+            <RadioButton mnemonicParsing="false" text="Small">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sizeGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Medium" toggleGroup="$sizeGroup" />
+            <RadioButton mnemonicParsing="false" text="Large" toggleGroup="$sizeGroup" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.rowIndex="4">
+         <children>
+            <RadioButton mnemonicParsing="false" text="Single">
+               <toggleGroup>
+                  <ToggleGroup fx:id="cheeseGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Double" toggleGroup="$cheeseGroup" />
+            <RadioButton mnemonicParsing="false" text="Triple" toggleGroup="$cheeseGroup" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.rowIndex="6">
+         <children>
+            <RadioButton fx:id="pNone" mnemonicParsing="false" onAction="#pepClick1" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="pepGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="pSingle" mnemonicParsing="false" onAction="#pepClick2" text="Single" toggleGroup="$pepGroup" />
+            <RadioButton fx:id="pDouble" mnemonicParsing="false" onAction="#pepClick2" text="Double" toggleGroup="$pepGroup" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.rowIndex="8">
+         <children>
+            <RadioButton fx:id="mNone" disable="true" mnemonicParsing="false" onAction="#pizzaClick" text="None">
+               <toggleGroup>
+                  <ToggleGroup fx:id="mushGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="mSingle" disable="true" mnemonicParsing="false" onAction="#pizzaClick" text="Single" toggleGroup="$mushGroup" />
+            <RadioButton fx:id="mDouble" disable="true" mnemonicParsing="false" onAction="#pizzaClick" text="Double" toggleGroup="$mushGroup" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <Label stylesheets="@application.css" text="Size of pizza:" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </Label>
+      <Label stylesheets="@application.css" text="Amount of cheese:" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label stylesheets="@application.css" text="Amount of pepperoni:" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label stylesheets="@application.css" text="Amount of mushrooms:" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.columnIndex="3" GridPane.rowIndex="10">
+         <children>
+            <Button fx:id="Add" disable="true" mnemonicParsing="false" onAction="#printItem" text="Add" />
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.rowIndex="10">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Button fx:id="calcCost" disable="true" mnemonicParsing="false" onAction="#orderPizza" text="Calculate Cost" />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <children>
+            <TextField fx:id="singleCost" editable="false" maxWidth="75.0" minHeight="25.0" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" promptText="Single..." />
+            <TextField fx:id="dispCost" maxWidth="75.0" minHeight="25.0" minWidth="50.0" prefHeight="25.0" prefWidth="50.0" promptText="Total..." />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="2" GridPane.rowSpan="4">
+         <children>
+            <TextArea fx:id="textArea" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <VBox alignment="CENTER_LEFT" maxWidth="243.0" prefHeight="59.0" prefWidth="243.0" stylesheets="@application.css" GridPane.rowIndex="9">
+         <children>
+            <TextField fx:id="Quantity" editable="false" maxWidth="75.0" minWidth="75.0" onAction="#allowCost" prefWidth="75.0" promptText="Quantity..." />
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </VBox>
+      <Label stylesheets="@application.css" text="Total Cost:" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" stylesheets="@application.css" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <children>
+            <TextField fx:id="toCost" maxWidth="100.0" minWidth="75.0" prefWidth="75.0" promptText="Total cost..." />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
